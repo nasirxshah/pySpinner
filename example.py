@@ -1,0 +1,122 @@
+from ora import Ora, Spinner
+import time
+from colorama import Fore
+import random
+
+
+spinners = [
+    Spinner.DOTS,
+    Spinner.DOTS2,
+    Spinner.DOTS3,
+    Spinner.DOTS4,
+    Spinner.DOTS5,
+    Spinner.DOTS6,
+    Spinner.DOTS7,
+    Spinner.DOTS8,
+    Spinner.DOTS9,
+    Spinner.DOTS10,
+    Spinner.DOTS11,
+    Spinner.DOTS12,
+    Spinner.DOTS13,
+    Spinner.DOTS8BIT,
+    Spinner.SAND,
+    Spinner.LINE,
+    Spinner.LINE2,
+    Spinner.PIPE,
+    Spinner.SIMPLEDOTS,
+    Spinner.SIMPLEDOTSSCROLLING,
+    Spinner.STAR,
+    Spinner.STAR2,
+    Spinner.FLIP,
+    Spinner.HAMBURGER,
+    Spinner.GROWVERTICAL,
+    Spinner.GROWHORIZONTAL,
+    Spinner.BALLOON,
+    Spinner.BALLOON2,
+    Spinner.NOISE,
+    Spinner.BOUNCE,
+    Spinner.BOXBOUNCE,
+    Spinner.BOXBOUNCE2,
+    Spinner.TRIANGLE,
+    Spinner.ARC,
+    Spinner.CIRCLE,
+    Spinner.SQUARECORNERS,
+    Spinner.CIRCLEQUARTERS,
+    Spinner.CIRCLEHALVES,
+    Spinner.SQUISH,
+    Spinner.TOGGLE,
+    Spinner.TOGGLE2,
+    Spinner.TOGGLE3,
+    Spinner.TOGGLE4,
+    Spinner.TOGGLE5,
+    Spinner.TOGGLE6,
+    Spinner.TOGGLE7,
+    Spinner.TOGGLE8,
+    Spinner.TOGGLE9,
+    Spinner.TOGGLE10,
+    Spinner.TOGGLE11,
+    Spinner.TOGGLE12,
+    Spinner.TOGGLE13,
+    Spinner.ARROW,
+    Spinner.ARROW2,
+    Spinner.ARROW3,
+    Spinner.BOUNCINGBAR,
+    Spinner.BOUNCINGBALL,
+    Spinner.SMILEY,
+    Spinner.MONKEY,
+    Spinner.HEARTS,
+    Spinner.CLOCK,
+    Spinner.EARTH,
+    Spinner.MATERIAL,
+    Spinner.MOON,
+    Spinner.RUNNER,
+    Spinner.PONG,
+    Spinner.SHARK,
+    Spinner.DQPB,
+    Spinner.WEATHER,
+    Spinner.CHRISTMAS,
+    Spinner.GRENADE,
+    Spinner.POINT,
+    Spinner.LAYER,
+    Spinner.BETAWAVE,
+    Spinner.FINGERDANCE,
+    Spinner.FISTBUMP,
+    Spinner.SOCCERHEADER,
+    Spinner.MINDBLOWN,
+    Spinner.SPEAKER,
+    Spinner.ORANGEPULSE,
+    Spinner.BLUEPULSE,
+    Spinner.ORANGEBLUEPULSE,
+    Spinner.TIMETRAVEL,
+    Spinner.AESTHETIC
+]
+
+colors = [
+    Fore.BLACK,
+    Fore.BLUE,
+    Fore.CYAN,
+    Fore.GREEN,
+    Fore.LIGHTBLACK_EX,
+    Fore.LIGHTBLUE_EX,
+    Fore.LIGHTCYAN_EX,
+    Fore.LIGHTGREEN_EX,
+
+    Fore.LIGHTMAGENTA_EX,
+    Fore.LIGHTRED_EX,
+    Fore.LIGHTWHITE_EX,
+    Fore.LIGHTYELLOW_EX,
+    Fore.MAGENTA,
+    Fore.RED,
+    Fore.RESET,
+    Fore.WHITE,
+    Fore.YELLOW
+]
+
+for spinner in spinners:
+    ora = Ora(spinner)
+    ora.text = spinner.name
+    ora.color = random.choice(colors)
+    ora.spin()
+    time.sleep(1)
+    ora.stop()
+    print()
